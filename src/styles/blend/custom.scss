@@ -1,0 +1,14 @@
+body {
+    background-color: #e4e4e4;
+    h1 {
+        color: #1d1d1d;
+    }
+    .collection__grid__row {
+        display: flex;
+        flex-flow: wrap;
+        .collection__grid__item {
+            flex: 1 0 33%;
+            max-width: 50%;
+        }
+    }
+} 
