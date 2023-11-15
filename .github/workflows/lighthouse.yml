@@ -1,0 +1,22 @@
+name: Lighthouse CI
+on:
+  schedule:
+    - cron: '0 * * * *' # Runs every hour
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Run Lighthouse
+      uses: treosh/lighthouse-ci-action@v3
+      with:
+        urls: |
+              https://uk.kineticasports.com/
+              https://uk.kineticasports.com/blogs/news/when-should-you-take-creatine
+              https://uk.kineticasports.com/products/creatine
+              https://uk.kineticasports.com/collections/whey-protein-powder
+        configPath: './lighthouse/lighthouserc.json'
+        uploadArtifacts: true
+
