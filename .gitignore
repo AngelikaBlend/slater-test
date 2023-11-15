@@ -3,3 +3,5 @@ package-lock.json
 config.yml
 build
 test.config.js
+slater.config.js
+```
