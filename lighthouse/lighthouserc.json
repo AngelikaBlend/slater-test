@@ -2,7 +2,8 @@
     "ci": {
         "collect": {
             "settings": {
-                "emulatedFormFactor": "both"
+                "emulatedFormFactor": "both",
+                "chromeFlags": "--no-sandbox --headless --disable-gpu"
             }
         }
     }

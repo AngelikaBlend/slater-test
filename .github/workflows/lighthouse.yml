@@ -8,14 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Start Chrome Headless
-        run: |
-          google-chrome-stable --headless --no-sandbox --remote-debugging-port=9222 &
+        uses: actions/checkout@v3
 
       - name: Run Lighthouse
-        uses: treosh/lighthouse-ci-action@v3
+        uses: treosh/lighthouse-ci-action@v10
         with:
           urls: |
             https://uk.kineticasports.com/
